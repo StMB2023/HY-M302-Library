@@ -2,11 +2,11 @@
 
 Eine Arduino-Bibliothek für das HY-M302 Shield.
 
-![Image text](/bild.jpg)
+![Image text](/HY-M302.jpg)
 
 ## Version
 
-1.1
+1.4
 
 ## Autor
 
@@ -138,6 +138,14 @@ Diese Funktion ermöglicht die Steuerung einer RGB-LED (Rot, Grün, Blau).
 
 - `redState`, `greenState`, `blueState`: Die Zustände (HIGH oder LOW) für Rot, Grün und Blau.
 
+### `void controlBrightnessRGBLED(int redState, int greenState, int blueState)`
+
+Diese Funktion ermöglicht die Steuerung der Helligkeit einer RGB-LED (Rot, Grün, Blau).
+
+- `redState`, `greenState`, `blueState`: Die Zustände (0 - 255) für Rot, Grün und Blau.
+
+
+	
 ### `void controlBuzzer(int frequency, int duration)`
 
 Diese Funktion ermöglicht die Steuerung eines Buzzers.
