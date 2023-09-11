@@ -1,6 +1,6 @@
 /*
   Beispiel für die Bibliothek HYM302Library
-  Version 1.1.0
+  Version 1.1.2
   (C) 2024 Stefan Muehlbauer
 */
 
