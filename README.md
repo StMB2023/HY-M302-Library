@@ -2,7 +2,7 @@
 
 Eine Arduino-Bibliothek für das HY-M302 Shield.
 
-![Image text](/bild.jpg)
+![Image text](/HY-M302.jpg)
 
 ## Version
 
