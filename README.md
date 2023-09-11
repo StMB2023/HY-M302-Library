@@ -83,7 +83,7 @@ Messung der Temperatur und Luftfeuchtigkeit mit dem DHT11-Sensor
     Steuerung einer RGB-LED (Rot, Grün, Blau)
     Steuerung eines Buzzers
 
-##Funktionen
+Funktionen
 ### `void getPins()`
 
 Diese Funktion gibt die Konfiguration der Pin-Belegungen für das HY-M302 Shield zurück.
@@ -155,6 +155,6 @@ Diese Funktion ermöglicht die Steuerung eines Buzzers.
 
 Weitere Informationen zu diesen Funktionen finden Sie in der Dokumentation der Bibliothek.
 
-##Lizenz
+Lizenz
 
 Diese Bibliothek ist unter der MIT-Lizenz lizenziert.
