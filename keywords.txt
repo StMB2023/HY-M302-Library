@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map HYM302Library
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+HYM302Library	KEYWORD1	HYM302Library
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+readDHT11			KEYWORD2
+readLM35			KEYWORD2
+readPotentiometer	KEYWORD2
+readPhotoresistor	KEYWORD2
+readButton			KEYWORD2
+controlLED			KEYWORD2
+controlRGBLED		KEYWORD2
+controlBuzzer		KEYWORD2
+testLEDs			KEYWORD2
+toggleLED			KEYWORD2
+getLEDState			KEYWORD2
+testLEDs			KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
+
+
