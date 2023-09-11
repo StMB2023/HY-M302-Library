@@ -79,15 +79,16 @@ Die HYM302 Library bietet verschiedene Funktionen zur Steuerung der Komponenten 
 * Steuerung eines Buzzers
 
 Funktionen
-void getPins()
+
+> void getPins()
 Diese Funktion gibt die Konfiguration der Pin-Belegungen für das HY-M302 Shield zurück.
 
-void controlLED(int LED, bool state)
+> void controlLED(int LED, bool state)
 Diese Funktion ermöglicht die Steuerung einer LED auf dem HY-M302 Shield.
     LED: Der Pin der zu steuernden LED.
     state: Der Zustand, den die LED haben soll (HIGH für Ein, LOW für Aus).
 
-void toggleLED(int LED)
+> void toggleLED(int LED)
 Diese Funktion ändert den Zustand einer LED (von Ein auf Aus oder umgekehrt).
     LED: Der Pin der zu steuernden LED.
 
