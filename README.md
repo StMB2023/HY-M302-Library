@@ -1,8 +1,8 @@
-# HY-M302 Library
+# HYM302 Library
 
 Eine Arduino-Bibliothek für das HY-M302 Shield.
 
-![Image text](/HY-M302.jpg)
+![Image text](/bild.jpg)
 
 ## Version
 
@@ -69,16 +69,19 @@ void loop() {
 
 ```
 
+
 Funktionen
+
 Die HYM302 Library bietet verschiedene Funktionen zur Steuerung der Komponenten des HY-M302 Shields, darunter:
-* Steuerung von LEDs
-* Lesen des Zustands von Tastern
-* Messung der Temperatur und Luftfeuchtigkeit mit dem DHT11-Sensor
-* Messung der Temperatur mit dem LM35-Sensor
-* Messung des Potentiometerwerts
-* Messung des Fotowiderstandswerts
-* Steuerung einer RGB-LED (Rot, Grün, Blau)
-* Steuerung eines Buzzers
+
+Steuerung von LED
+Lesen des Zustands von Tastern
+Messung der Temperatur und Luftfeuchtigkeit mit dem DHT11-Sensor
+    Messung der Temperatur mit dem LM35-Sensor
+    Messung des Potentiometerwerts
+    Messung des Fotowiderstandswerts
+    Steuerung einer RGB-LED (Rot, Grün, Blau)
+    Steuerung eines Buzzers
 
 Funktionen
 ### `void getPins()`
@@ -89,26 +92,26 @@ Diese Funktion gibt die Konfiguration der Pin-Belegungen für das HY-M302 Shield
 
 Diese Funktion ermöglicht die Steuerung einer LED auf dem HY-M302 Shield.
 
-- `LED`: Der Pin der zu steuernden LED.
+- `LED`: Die LED (1 oder2) der zu steuernden LED.
 - `state`: Der Zustand, den die LED haben soll (HIGH für Ein, LOW für Aus).
 
 ### `void toggleLED(int LED)`
 
 Diese Funktion ändert den Zustand einer LED (von Ein auf Aus oder umgekehrt).
 
-- `LED`: Der Pin der zu steuernden LED.
+- `LED`: Die LED (1 oder2) der zu steuernden LED.
 
 ### `bool getLEDState(int LED)`
 
 Diese Funktion gibt den aktuellen Zustand einer LED zurück.
 
-- `LED`: Der Pin der zu überprüfenden LED.
+- `LED`: Die LED (1 oder2) der zu überprüfenden LED.
 
 ### `int readButton(int Button)`
 
 Diese Funktion liest den Zustand eines Tasters und gibt den Wert zurück (HIGH oder LOW).
 
-- `Button`: Der Pin des Tasters.
+- `Button`: Butto (1 oder 2) des Tasters.
 
 ### `void readDHT11(int* temperature, int* humidity)`
 
@@ -129,18 +132,16 @@ Diese Funktion liest den Wert eines Potentiometers und gibt ihn zurück.
 
 Diese Funktion liest den Wert eines Fotowiderstands und gibt ihn zurück.
 
-### `void controlRGBLED(int redPin, int greenPin, int bluePin, int redState, int greenState, int blueState)`
+### `void controlRGBLED(int redState, int greenState, int blueState)`
 
 Diese Funktion ermöglicht die Steuerung einer RGB-LED (Rot, Grün, Blau).
 
-- `redPin`, `greenPin`, `bluePin`: Die Pins für Rot, Grün und Blau der RGB-LED.
 - `redState`, `greenState`, `blueState`: Die Zustände (HIGH oder LOW) für Rot, Grün und Blau.
 
-### `void controlBuzzer(int pin, int frequency, int duration)`
+### `void controlBuzzer(int frequency, int duration)`
 
 Diese Funktion ermöglicht die Steuerung eines Buzzers.
 
-- `pin`: Der Pin des Buzzers.
 - `frequency`: Die Frequenz des Signals.
 - `duration`: Die Dauer des Signals.
 
