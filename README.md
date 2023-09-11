@@ -37,7 +37,7 @@ Die HYM302 Library ist eine Arduino-Bibliothek, die entwickelt wurde, um das HY-
 
 Um die HYM302 Library in Ihrem Arduino-Projekt zu verwenden, fügen Sie die `#include`-Anweisung am Anfang Ihres Sketches hinzu:
 
-'''
+```
 #include <HYM302Library.h>
 
 Erstellen Sie dann eine Instanz der HYM302Library-Klasse:
@@ -65,7 +65,7 @@ void loop() {
   delay(1000);
 }
 
-'''
+```
 
 
 Funktionen
