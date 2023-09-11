@@ -8,11 +8,6 @@
 
 HYM302Library MyHYM302;
 
-const int buttonPin1 = 2; // Pin für den Taster
-const int ledPin1 = 13;   // Pin für die LED
-
-const int buttonPin2 = 3; // Pin für den Taster
-const int ledPin2 = 12;   // Pin für die LED
 
 const int redPin = 9;    // Pin für die rote LED
 const int greenPin = 10; // Pin für die grüne LED
@@ -22,6 +17,7 @@ const int buzzerPin = 5; // Pin für den Buzzer
 
 void setup() {
   Serial.begin(9600);
+  Serial.println("Setup");
   //pinMode(buttonPin1, INPUT_PULLUP); // Taster-Pin als Eingang mit Pull-Up-Widerstand
   //pinMode(ledPin1, OUTPUT);          // LED-Pin als Ausgang 
   MyHYM302.getPins();
@@ -62,15 +58,11 @@ void setup() {
 
   MyHYM302.testLEDs();
 
-  //pinMode(buttonPin2, INPUT_PULLUP); // Taster-Pin als Eingang mit Pull-Up-Widerstand
-  //pinMode(ledPin2, OUTPUT);          // LED-Pin als Ausgang
-  //MyHYM302.controlLED(ledPin2, 0); 
-  //delay(200);
-  //MyHYM302.controlLED(ledPin2, 1); 
 
 }
 
 void loop() {
+  Serial.println("Loop");
   float LM35Temperature = MyHYM302.readLM35();
   Serial.print("LM35 Temperature: ");
   Serial.println(LM35Temperature);
@@ -108,22 +100,36 @@ void loop() {
   Serial.print("Button 2 State: ");
   Serial.println(buttonState2);
 
-  MyHYM302.controlRGBLED(redPin, greenPin, bluePin, 1, 0, 0);
+  Serial.println("RGB LEDs");
+  MyHYM302.controlRGBLED( 1, 0, 0);
   delay(100);
-  MyHYM302.controlRGBLED(redPin, greenPin, bluePin, 0, 1, 0);
+  MyHYM302.controlRGBLED(  0, 1, 0);
   delay(100);
-  MyHYM302.controlRGBLED(redPin, greenPin, bluePin, 0, 0, 1);
+  MyHYM302.controlRGBLED(  0, 0, 1);
   delay(100);
-  MyHYM302.controlRGBLED(redPin, greenPin, bluePin, 1, 1, 1);
+  MyHYM302.controlRGBLED(  1, 1, 1);
   delay(100);
-  MyHYM302.controlRGBLED(redPin, greenPin, bluePin, 0, 0, 0);
+  MyHYM302.controlRGBLED(  0, 0, 0);
     
     // Buzzer mit 1000 Hz Frequenz für 1 Sekunde aktivieren
-    //MyHYM302.controlBuzzer(buzzerPin, 1000, 500);
-    //delay(100); // Pause von 1 Sekunde
+  Serial.println("Buzzer");
+  //MyHYM302.controlBuzzer(1000, 500);
+  //delay(100); // Pause von 1 Sekunde
+  
+  Serial.print("Status LED 1 : ");
+  Serial.println(MyHYM302.getLEDState(1));
+  Serial.print("Status LED 2 : ");
+  Serial.println(MyHYM302.getLEDState(2));
+  Serial.println("toggle LEDs");
   
   MyHYM302.toggleLED(1);
   MyHYM302.toggleLED(2);
+
+  Serial.print("Status LED 1 : ");
+  Serial.println(MyHYM302.getLEDState(1));
+  Serial.print("Status LED 2 : ");
+  Serial.println(MyHYM302.getLEDState(2));
+
   delay(100);
 
 }
