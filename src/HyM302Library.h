@@ -2,7 +2,7 @@
 HYM302Library.h
 Bibliothek für das Shield HY-M302
 
-Version 1.1.0
+Version 1.1.2
 
 (C) 2024 Stefan Muehlbauer
 
@@ -29,7 +29,7 @@ byte Button1Pin = 2;
 byte Button2Pin = 3;
 byte LM35Pin = A2;
 byte DHT11Pin = 4;
-byte BuzzerPin = A0;
+byte BuzzerPin = 5;
 byte FotowiderstandPin = A1;
 byte PotiPin= A0;
 byte RGBRotPin = 9;
@@ -62,10 +62,10 @@ byte RGBBlauPin = 11;
 
 
     // Funktion zur Steuerung einer RGB-LED (Rot, Grün, Blau)
-    void controlRGBLED(int redPin, int greenPin, int bluePin, int redStatet, int greenState, int blueState);
+    void controlRGBLED(int redStatet, int greenState, int blueState);
 
     // Funktion zur Steuerung eines Buzzers
-    void controlBuzzer(int pin, int frequency, int duration);
+    void controlBuzzer(int frequency, int duration);
 
 };
 

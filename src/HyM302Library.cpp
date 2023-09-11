@@ -1,7 +1,7 @@
 /*
 HYM302Library.cpp
 Bibliothek für das Shield HY-M302
-Version 1.1.0
+Version 1.1.2
 
 (C) 2024 Stefan Muehlbauer
 
@@ -17,8 +17,9 @@ HYM302Library::HYM302Library() {
 	
 	pinMode(Button1Pin, INPUT);
 	pinMode(Button2Pin, INPUT);
-	
+
 	Serial.begin(9600);
+/*
 	Serial.println(LED1Pin);
 	Serial.println(LED2Pin);
 	Serial.println(Button1Pin);
@@ -28,6 +29,8 @@ HYM302Library::HYM302Library() {
 	Serial.println(DHT11Pin);
 	Serial.println(PotiPin);
 	Serial.println(FotowiderstandPin);
+	
+*/
 	Serial.end();
 	
 }
@@ -181,14 +184,14 @@ int HYM302Library::readPhotoresistor() {
 }
 
 
-void HYM302Library::controlRGBLED(int redPin, int greenPin, int bluePin, int redState, int greenState, int blueState) {
-    digitalWrite(redPin, redState);     // Roter Kanal
-    digitalWrite(greenPin, greenState); // Grüner Kanal
-    digitalWrite(bluePin, blueState);   // Blauer Kanal
+void HYM302Library::controlRGBLED(int redState, int greenState, int blueState) {
+    digitalWrite(RGBRotPin, redState);     // Roter Kanal
+    digitalWrite(RGBGruenPin, greenState); // Grüner Kanal
+    digitalWrite(RGBBlauPin, blueState);   // Blauer Kanal
 }
 
-void HYM302Library::controlBuzzer(int pin, int frequency, int duration) {
-    tone(pin, frequency); // Buzzer aktivieren mit Frequenz
+void HYM302Library::controlBuzzer(int frequency, int duration) {
+    tone(BuzzerPin, frequency); // Buzzer aktivieren mit Frequenz
     delay(duration);      // Eine bestimmte Zeit aktiviert lassen
-    noTone(pin);          // Buzzer ausschalten
+    noTone(BuzzerPin);          // Buzzer ausschalten
 }
