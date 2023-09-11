@@ -3,7 +3,7 @@ HYM302Library.cpp
 Bibliothek für das Shield HY-M302
 Version 1.1.2
 
-(C) 2024 Stefan Muehlbauer
+(C) 2023 Stefan Muehlbauer
 
 */
 
