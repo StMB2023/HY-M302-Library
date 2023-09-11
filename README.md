@@ -25,7 +25,7 @@ Die HYM302 Library ist eine Arduino-Bibliothek, die entwickelt wurde, um das HY-
 
 ## Installation
 
-1. Laden Sie die HYM302 Library von [hier](https://example.com/link-zur-bibliothek) herunter.
+1. Laden Sie die HYM302 Library von [hier](https://github.com/StMB2023/HYM302Library) herunter.
 
 2. Entpacken Sie das Archiv und verschieben Sie den Ordner in das "libraries"-Verzeichnis Ihres Arduino-Projekts.
 
