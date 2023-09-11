@@ -81,49 +81,69 @@ Steuerung eines Buzzers
 Funktionen
 
 void getPins()
+
 Diese Funktion gibt die Konfiguration der Pin-Belegungen für das HY-M302 Shield zurück.
 
 void controlLED(int LED, bool state)
+
 Diese Funktion ermöglicht die Steuerung einer LED auf dem HY-M302 Shield.
+
 LED: Der Pin der zu steuernden LED.
+
 state: Der Zustand, den die LED haben soll (HIGH für Ein, LOW für Aus).
 
 void toggleLED(int LED)
+
 Diese Funktion ändert den Zustand einer LED (von Ein auf Aus oder umgekehrt).
+
 LED: Der Pin der zu steuernden LED.
 
 bool getLEDState(int LED)
+
 Diese Funktion gibt den aktuellen Zustand einer LED zurück.
+
 LED: Der Pin der zu überprüfenden LED.
 
 int readButton(int Button)
+
 Diese Funktion liest den Zustand eines Tasters und gibt den Wert zurück (HIGH oder LOW).
+
 Button: Der Pin des Tasters.
 
 void readDHT11(int* temperature, int* humidity)
+
 Diese Funktion liest die Temperatur und Luftfeuchtigkeit von einem DHT11-Sensor aus und gibt die Werte in den übergebenen Zeigern zurück.
 temperature: Ein Zeiger auf eine Variable zur Speicherung der Temperatur.
 humidity: Ein Zeiger auf eine Variable zur Speicherung der Luftfeuchtigkeit.
 
 float readLM35()
+
 Diese Funktion liest die Temperatur von einem LM35-Sensor aus und gibt den Wert als Gleitkommazahl zurück.
 
 int readPotentiometer()
+
 Diese Funktion liest den Wert eines Potentiometers und gibt ihn zurück.
 
 int readPhotoresistor()
+
 Diese Funktion liest den Wert eines Fotowiderstands und gibt ihn zurück.
 
 void controlRGBLED(int redPin, int greenPin, int bluePin, int redState, int greenState, int blueState)
+
 Diese Funktion ermöglicht die Steuerung einer RGB-LED (Rot, Grün, Blau).
 
 redPin, greenPin, bluePin: Die Pins für Rot, Grün und Blau der RGB-LED.
+
 redState, greenState, blueState: Die Zustände (HIGH oder LOW) für Rot, Grün und Blau.
 
 void controlBuzzer(int pin, int frequency, int duration)
+
 Diese Funktion ermöglicht die Steuerung eines Buzzers.
+
 pin: Der Pin des Buzzers.
+
 frequency: Die Frequenz des Signals.
+
 duration: Die Dauer des Signals.
 
 Weitere Informationen zu diesen Funktionen finden Sie in der Dokumentation der Bibliothek.
