@@ -37,12 +37,10 @@ Die HYM302 Library ist eine Arduino-Bibliothek, die entwickelt wurde, um das HY-
 
 Um die HYM302 Library in Ihrem Arduino-Projekt zu verwenden, fügen Sie die `#include`-Anweisung am Anfang Ihres Sketches hinzu:
 
-```cpp
+'''
 #include <HYM302Library.h>
 
 Erstellen Sie dann eine Instanz der HYM302Library-Klasse:
-
-cpp
 
 HYM302Library hym302;
 
@@ -50,8 +48,6 @@ Verwenden Sie die verschiedenen Funktionen der Bibliothek, um auf die Funktionen
 Beispiel
 
 Hier ist ein einfaches Beispiel, wie Sie die LED1 des HY-M302 Shields steuern können:
-
-cpp
 
 #include <HYM302Library.h>
 
@@ -68,6 +64,9 @@ void loop() {
   hym302.controlLED(hym302.LED1Pin, LOW); // LED1 ausschalten
   delay(1000);
 }
+
+'''
+
 
 Funktionen
 
