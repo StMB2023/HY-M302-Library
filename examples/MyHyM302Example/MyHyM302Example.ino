@@ -8,24 +8,17 @@
 
 HYM302Library MyHYM302;
 
-
-const int redPin = 9;    // Pin für die rote LED
-const int greenPin = 10; // Pin für die grüne LED
-const int bluePin = 11;  // Pin für die blaue LED
-
-const int buzzerPin = 5; // Pin für den Buzzer
-
 void setup() {
   Serial.begin(9600);
   Serial.println("Setup");
-  //pinMode(buttonPin1, INPUT_PULLUP); // Taster-Pin als Eingang mit Pull-Up-Widerstand
-  //pinMode(ledPin1, OUTPUT);          // LED-Pin als Ausgang 
+
   MyHYM302.getPins();
 
   MyHYM302.controlLED(1,1); 
   Serial.print("Status LED 1 : ");
   Serial.println(MyHYM302.getLEDState(1));
   delay(1000);
+
   MyHYM302.controlLED(1,0); 
   Serial.print("Status LED 1 : ");
   Serial.println(MyHYM302.getLEDState(1));
@@ -33,6 +26,7 @@ void setup() {
   Serial.print("Status LED 2 : ");
   Serial.println(MyHYM302.getLEDState(2));
   delay(1000);
+
   MyHYM302.controlLED(2,0); 
   Serial.print("Status LED 2 : ");
   Serial.println(MyHYM302.getLEDState(2));
@@ -57,7 +51,6 @@ void setup() {
   Serial.println(MyHYM302.getLEDState(2));
 
   MyHYM302.testLEDs();
-
 
 }
 
@@ -111,7 +104,7 @@ void loop() {
   delay(100);
   MyHYM302.controlRGBLED(  0, 0, 0);
     
-    // Buzzer mit 1000 Hz Frequenz für 1 Sekunde aktivieren
+  // Buzzer mit 1000 Hz Frequenz für 1 Sekunde aktivieren
   Serial.println("Buzzer");
   //MyHYM302.controlBuzzer(1000, 500);
   //delay(100); // Pause von 1 Sekunde
