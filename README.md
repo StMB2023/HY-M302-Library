@@ -67,19 +67,18 @@ void loop() {
 
 ```
 
-
 Funktionen
 
 Die HYM302 Library bietet verschiedene Funktionen zur Steuerung der Komponenten des HY-M302 Shields, darunter:
 
-    Steuerung von LEDs
-    Lesen des Zustands von Tastern
-    Messung der Temperatur und Luftfeuchtigkeit mit dem DHT11-Sensor
-    Messung der Temperatur mit dem LM35-Sensor
-    Messung des Potentiometerwerts
-    Messung des Fotowiderstandswerts
-    Steuerung einer RGB-LED (Rot, Grün, Blau)
-    Steuerung eines Buzzers
+Steuerung von LEDs
+Lesen des Zustands von Tastern
+Messung der Temperatur und Luftfeuchtigkeit mit dem DHT11-Sensor
+Messung der Temperatur mit dem LM35-Sensor
+Messung des Potentiometerwerts
+Messung des Fotowiderstandswerts
+Steuerung einer RGB-LED (Rot, Grün, Blau)
+Steuerung eines Buzzers
 
 Funktionen
 void getPins()
