@@ -1,4 +1,4 @@
-# HYM302 Library
+# HY-M302 Library
 
 Eine Arduino-Bibliothek für das HY-M302 Shield.
 
