@@ -25,6 +25,7 @@ testLEDs			KEYWORD2
 toggleLED			KEYWORD2
 getLEDState			KEYWORD2
 testLEDs			KEYWORD2
+controlBrightnessRGBLED	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
