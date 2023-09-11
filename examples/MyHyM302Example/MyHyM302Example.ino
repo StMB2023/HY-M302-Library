@@ -1,6 +1,6 @@
 /*
   Beispiel für die Bibliothek HYM302Library
-  Version 1.1.2
+  Version 1.1.4
   (C) 2023 Stefan Muehlbauer
 */
 
@@ -103,7 +103,43 @@ void loop() {
   MyHYM302.controlRGBLED(  1, 1, 1);
   delay(100);
   MyHYM302.controlRGBLED(  0, 0, 0);
-    
+  
+  int i;
+
+  Serial.println("RGB LED Helligkeit");
+  
+  for (i = 0; i <= 255; i++){
+    MyHYM302.controlBrightnessRGBLED(i,0,0);  
+    delay(10);
+  } 
+  
+  for (i = 255; i >= 0; i--){
+    MyHYM302.controlBrightnessRGBLED(i,0,0);  
+    delay(10);
+  }
+
+  for (i = 0; i <= 255; i++){
+    MyHYM302.controlBrightnessRGBLED(0,i,0);  
+    delay(10);
+  }
+  
+  for (i = 255; i >= 0; i--){
+    MyHYM302.controlBrightnessRGBLED(0,i,0);  
+    delay(10);
+  }
+
+  for (i = 0; i <= 255; i++){
+    MyHYM302.controlBrightnessRGBLED(0,0,i);  
+    delay(10);
+  }  
+  
+  for (i = 255; i >= 0; i--){
+    MyHYM302.controlBrightnessRGBLED(0,0,i);  
+    delay(10);
+  }
+
+  
+
   // Buzzer mit 1000 Hz Frequenz für 1 Sekunde aktivieren
   Serial.println("Buzzer");
   //MyHYM302.controlBuzzer(1000, 500);
