@@ -3,7 +3,7 @@ HYM302Library.cpp
 Bibliothek für das Shield HY-M302
 Version 1.1.2
 
-(C) 2023 Stefan Muehlbauer
+(C) 2024 Stefan Muehlbauer
 
 */
 
@@ -188,6 +188,14 @@ void HYM302Library::controlRGBLED(int redState, int greenState, int blueState) {
     digitalWrite(RGBRotPin, redState);     // Roter Kanal
     digitalWrite(RGBGruenPin, greenState); // Grüner Kanal
     digitalWrite(RGBBlauPin, blueState);   // Blauer Kanal
+}
+
+
+void HYM302Library::controlBrightnessRGBLED(int redState, int greenState, int blueState) {
+    analogWrite(RGBRotPin, redState);     // Roter Kanal
+    analogWrite(RGBGruenPin, greenState); // Grüner Kanal
+    analogWrite(RGBBlauPin, blueState);   // Blauer Kanal
+
 }
 
 void HYM302Library::controlBuzzer(int frequency, int duration) {

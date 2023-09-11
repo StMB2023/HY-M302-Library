@@ -4,7 +4,7 @@ Bibliothek für das Shield HY-M302
 
 Version 1.1.2
 
-(C) 2023 Stefan Muehlbauer
+(C) 2024 Stefan Muehlbauer
 
 */
 
@@ -63,6 +63,9 @@ byte RGBBlauPin = 11;
 
     // Funktion zur Steuerung einer RGB-LED (Rot, Grün, Blau)
     void controlRGBLED(int redStatet, int greenState, int blueState);
+    
+	// Funktion zur Steuerung der Heeligkeit einer RGB-LED (Rot, Grün, Blau)
+    void controlBrightnessRGBLED(int redStatet, int greenState, int blueState);
 
     // Funktion zur Steuerung eines Buzzers
     void controlBuzzer(int frequency, int duration);
